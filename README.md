@@ -1,5 +1,6 @@
 # Text-To-Image-GAN-with-LSTM-GRU
- A GAN Modelcombines the features of GAN-CLS, DCGAN, GAN-INT to perform image synthesis from text.
+A GAN model that combines the features of DCGAN, GAN-CLS, GAN-INT conditioned on text embeddings generated from hybrid level RNN-CNN encoder which constitutes different recurrent neural networks for RNN encoder paired with CNN encoder.
+
  
  Working :
  
