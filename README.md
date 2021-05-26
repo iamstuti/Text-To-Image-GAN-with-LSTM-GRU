@@ -4,7 +4,7 @@ A GAN model that combines the features of DCGAN, GAN-CLS, GAN-INT conditioned on
  
  Working :
  
- To create the text embeddings, the noise z is sampled and then each sentence is encoded using RNN LSTM or GRU encoder. We also train the text encoder with a large amount of synonyms of each sentence, to ensure coverage of as many variations of the textual descriptions as possible in the English language.
+ To create the text embeddings, the noise z is sampled and then each sentence is encoded using RNN LSTM or GRU encoder(each using 128/256) hidden units. We also train the text encoder with a large amount of synonyms of each sentence, to ensure coverage of as many variations of the textual descriptions as possible in the English language.
  
 Next, this text embedding is first compressed to 128 dimensions using fully connected layer and Leaky ReLU and is concatenated with noise vector z. The Following this, Generator G uses this to text embedding, noise z to generate a synthetic image by passing it through a deconvolutional network comprising of Convolution, UpSampling and Batch Normalization layer stack. Consequently, Generator G generates a 64x64x3 image.
 
